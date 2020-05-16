@@ -1,3 +1,5 @@
+# Para lanzar los tests, ejecutar desde el raíz
+# pytest -s tests/test_kata1.py
 import pytest
 
 from kata1.rps import quienGana
@@ -31,4 +33,3 @@ def test_papel_vs_piedra():
 
 def test_tijeras_vs_papel():
 	assert(quienGana('Tijeras', 'Papel') == 'Ganaste!')
-    
