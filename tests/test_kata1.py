@@ -1,6 +1,6 @@
 import pytest
 
-from kata1.rps import quienGana
+from src.kata1.rps import quienGana
 
 def test_no_sensible_minusculas():
     assert(quienGana('PiEdRa', 'PaPeL') == 'Perdiste!')
@@ -31,4 +31,3 @@ def test_papel_vs_piedra():
 
 def test_tijeras_vs_papel():
 	assert(quienGana('Tijeras', 'Papel') == 'Ganaste!')
-    

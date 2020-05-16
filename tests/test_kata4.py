@@ -1,6 +1,6 @@
 import pytest
 
-from kata4.snake import Game, Snake
+from src.kata4.snake import Game, Snake
 
 def test_dead_in_top():
     snake = Snake()
