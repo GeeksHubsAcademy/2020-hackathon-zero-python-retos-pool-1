@@ -10,7 +10,9 @@ def quienGana(player, ai):
     player_choice = player.lower()
     ai_choice = ai.lower()
 
-    if player_choice == ai_choice:
+    if not(player_choice in ["piedra", "papel", "tijeras"]):
+        return "Entrada no válida. Debe ser Piedra, Papel o Tijeras"
+    elif player_choice == ai_choice:
         return "Empate!"
     elif player_choice == "piedra" and ai_choice == "papel":
         return "Perdiste!"
@@ -24,16 +26,12 @@ def quienGana(player, ai):
 # Entry Point
 def Game():
     player = input("Elige: ¿Piedra, Papel o Tijeras? ")
-    if player in options:
-        ai = "Piedra"
-        ai = options[randint(0, 2)]
-        print("Yo he elegido " + ai)
+    ai = options[randint(0, 2)]
+    print("Yo he elegido " + ai)
 
-        winner = quienGana(player, ai)
+    winner = quienGana(player, ai)
 
-        print(winner)
-    else:
-        print("Entrada no válida. Debe ser Piedra, Papel o Tijeras")
+    print(winner)
 
 # Descomentar la línea siguiente y ejecutar con python3 src/kata1/rps.py
 # Game()
