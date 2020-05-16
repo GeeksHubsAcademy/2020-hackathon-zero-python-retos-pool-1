@@ -13,12 +13,12 @@ def quienGana(player, ai):
     tijeras = '2'
     player = str(player)
     ai = str(ai)
-    if player == piedra:
+    if player == option[0]:
         if ai == piedra:
             resultado = 'Empate!'
         elif ai == tijeras:
             resultado = 'Ganaste!'
-    elif player == papel:
+    elif player == option[1]:
         if ai == papel:
             resultado = 'Empate!'
         elif ai == piedra:
