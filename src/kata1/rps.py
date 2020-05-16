@@ -23,13 +23,17 @@ def quienGana(player, ai):
 
 # Entry Point
 def Game():
-    #
-    #
-    
-    #
-    #
-    
-    winner = quienGana(player, ai)
+    player = input("Elige: ¿Piedra, Papel o Tijeras? ")
+    if player in options:
+        ai = "Piedra"
+        ai = options[randint(0, 2)]
+        print("Yo he elegido " + ai)
 
-    print(winner)
+        winner = quienGana(player, ai)
 
+        print(winner)
+    else:
+        print("Entrada no válida. Debe ser Piedra, Papel o Tijeras")
+
+# Descomentar la línea siguiente y ejecutar con python3 src/kata1/rps.py
+# Game()
