@@ -13,6 +13,7 @@ class Snake():
 
     # Manejo del pressed [KEYDOWN] de las teclas [K_RIGHT - K_LEFT - K_UP -K_DOWN ]
     def controller(self, event, pygame):
+
         return ""
     # Controla el cambio de  las direcciones
     # Orientaciones
@@ -28,6 +29,11 @@ class Snake():
         #
         #
         #
+        # if self.direction == "RIGHT":
+        #     for pos in self.body:
+        #         if pos[0] < 500:
+        #             print(pos)
+        #             pos[0] = pos[0] + 1
 
         #
         #
@@ -38,7 +44,7 @@ class Snake():
         #
         #
 
-        self.body.insert(0, list(self.position))
+        self.body.insert(0, self.position)
 
 class Game():
     run = True
@@ -88,9 +94,9 @@ class Game():
 def main():
     # Descomentar para lanzar el juego en local
     # Comentar para validar con el oráculo
-    pygame.init()
-    play_surface = pygame.display.set_mode((500, 500))
-    fps = pygame.time.Clock()
+    # pygame.init()
+    # play_surface = pygame.display.set_mode((500, 500))
+    # fps = pygame.time.Clock()
 
     snake = Snake()
     game = Game()
@@ -120,5 +126,5 @@ def main():
 # Comienza la aventura!!!!
 # Descomentar para lanzar el juego en local
 # Comentar para validar con el oráculo
-main()
-pygame.quit()
+# main()
+# pygame.quit()
