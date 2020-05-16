@@ -6,7 +6,37 @@ options = ["Piedra", "Papel", "Tijeras"]
 #'Empate!'
 #'Ganaste!'
 #'Perdiste!'
-def quienGana(player, ai):
+def quienGana(player, ai):    
+    player = player.lower();
+    ai = ai.lower();
+
+    if (player == ai):
+        return "Empate!"
+    
+    #Piedra gana
+    if (player=="piedra" and ai=="tijeras"):
+        return "Ganaste!"
+    
+    #Piedra pierde
+    if (player=="piedra" and ai=="papel"):
+        return "Perdiste!"
+
+    #Papel gana
+    if (player=="papel" and ai=="piedra"):
+        return "Ganaste!"
+    
+    #Papel pierde
+    if (player=="papel" and ai=="tijeras"):
+        return "Perdiste!"
+
+    #Tijeras gana
+    if (player=="tijeras" and ai=="papel"):
+        return "Ganaste!"
+    
+    #Papel pierde
+    if (player=="tijeras" and ai=="piedra"):
+        return "Perdiste!"
+
     return ""
 
 # Entry Point
