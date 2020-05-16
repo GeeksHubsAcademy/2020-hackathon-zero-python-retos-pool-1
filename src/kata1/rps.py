@@ -7,8 +7,8 @@ options = ["Piedra", "Papel", "Tijeras"]
 #'Ganaste!'
 #'Perdiste!'
 def quienGana(player, ai):    
-    player = player.lower();
-    ai = ai.lower();
+    player = player.lower()
+    ai = ai.lower()
 
     if (player == ai):
         return "Empate!"
@@ -43,11 +43,14 @@ def quienGana(player, ai):
 def Game():
     #
     #
-    
+    player = input("Escribe [Piedra,Papel,Tijeras]: ")
+
+    ai = options[randint(0,2)]
+
+    print ("Player: " + player + " vs " + ai)
     #
     #
     
     winner = quienGana(player, ai)
 
     print(winner)
-
