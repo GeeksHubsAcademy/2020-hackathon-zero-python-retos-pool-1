@@ -1,7 +1,7 @@
 import pytest
 import string
 
-from kata2.rpg import RandomPasswordGenerator
+from src.kata2.rpg import RandomPasswordGenerator
 
 def test_longitud_15():
 	assert(len(RandomPasswordGenerator(15)) == 15)

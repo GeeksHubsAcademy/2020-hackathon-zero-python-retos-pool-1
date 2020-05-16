@@ -1,6 +1,6 @@
 import pytest
 
-from kata3.bot import start, help, mayus, alreves
+from src.kata3.bot import start, help, mayus, alreves
 
 class Message():
     text = ''
